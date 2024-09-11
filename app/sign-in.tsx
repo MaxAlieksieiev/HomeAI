@@ -7,6 +7,9 @@ import {
   Center,
   NativeBaseProvider,
   Button,
+  Text,
+  Tooltip,
+  Box,
 } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useSession } from "../core/hooks/useSession";
@@ -19,6 +22,20 @@ export default function SignIn() {
     <NativeBaseProvider>
       <Center flex={1} px="3">
         <Stack space={4} w="100%" alignItems="center">
+          <Box alignContent="center" justifyContent="center">
+            <Text fontSize="4xl">Log in</Text>
+            <Box alignContent="center" flexDirection="row">
+              <Text fontSize="md">Welcome to HomeAI</Text>
+              <Tooltip label="Your personal book assistant" openDelay={500}>
+                <Icon
+                  as={<MaterialIcons name="question-mark" />}
+                  size={5}
+                  color="muted.400"
+                />
+              </Tooltip>
+            </Box>
+          </Box>
+          <Text></Text>
           <Input
             w={{
               base: "75%",
