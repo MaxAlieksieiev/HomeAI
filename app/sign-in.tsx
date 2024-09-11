@@ -8,7 +8,6 @@ import {
   NativeBaseProvider,
   Button,
   Text,
-  Tooltip,
   Box,
 } from "native-base";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -26,13 +25,6 @@ export default function SignIn() {
             <Text fontSize="4xl">Log in</Text>
             <Box alignContent="center" flexDirection="row">
               <Text fontSize="md">Welcome to HomeAI</Text>
-              <Tooltip label="Your personal book assistant" openDelay={500}>
-                <Icon
-                  as={<MaterialIcons name="question-mark" />}
-                  size={5}
-                  color="muted.400"
-                />
-              </Tooltip>
             </Box>
           </Box>
           <Text></Text>
